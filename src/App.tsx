@@ -1,14 +1,16 @@
-import { useState } from "react";
+import Navbar from "@/scenes/navbar"
 
-import viteLogo from "/vite.svg";
+
 
 function App() {
-  const [count, setCount] = useState(0);
+ 
 
   return (
-    <>
-      <div className="app">app</div>
-    </>
+    
+      <div className="app  bg-gray-20">
+       <Navbar />
+      </div>
+    
   );
 }
 
