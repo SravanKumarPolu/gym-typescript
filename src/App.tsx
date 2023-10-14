@@ -1,9 +1,8 @@
 import Navbar from "@/scenes/navbar"
 
 
-
 function App() {
- 
+  
 
   return (
     
