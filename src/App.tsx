@@ -29,7 +29,9 @@ function App() {
       selectedPage={selectedPage}
       setSelectedPage={setSelectedPage}
       /> 
-   <Home />
+<Home setSelectPage={function (value: SelectedPage): void {
+        throw new Error("Function not implemented.");
+      } }  />
       </div>
     
   );

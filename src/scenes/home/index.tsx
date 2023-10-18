@@ -9,7 +9,7 @@ import SponsorFortune from '@/assets/SponsorFortune.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 type Props = {
-    setSelectPage: (value: SelectedPage) => void;
+    setSelectPage: (value: SelectedPage) => void
 }
 
 const Home = ({ setSelectPage }: Props) => {
@@ -22,22 +22,28 @@ const Home = ({ setSelectPage }: Props) => {
           md:pb-0'
       >
           {/* Image and mainheader */}
-          <div>
+          <div className='md:flex mx-auto w-5/6 items-center
+          justify-center md:h-6/6'
+          >
               {/* mainheader */}
-              <div>
+              <div className='z-10 mt-32 md:basis-3/5'>
                   {/* Heading */}
-                  <div>
-                      <div>
-                          <div>
+                  <div className='md:-mt-20'>
+                      <div className='relative'>
+                          <div className='before:absolute before:-top-20
+                          before:-left-20 before:z-[-1]
+                         md:before:content-evolvetext'
+                          > 
                           <img src={HomePageText}
                               alt="home-page-text"
                           />
                       </div>
                       </div>
-                      <p className='text-primary-300'>Sharing inspirational health quotes is a great way to encourage your team to stay positive,
+                      <p className='text-primary-600 mt-8 text-sm'>Sharing inspirational health quotes is a great way to encourage your team to stay positive,
                           inspired, and healthy.</p>
                   </div>
                   {/* ACtion */}
+                  <div className='mt-8 flex items-center gap-8 '>
                   <ActionButton setSelectedPage={setSelectPage}
                   >
                       Join Now
@@ -50,9 +56,12 @@ const Home = ({ setSelectPage }: Props) => {
                   >
                    <p>Learn More</p>   
                   </AnchorLink>
+               </div>
               </div>
               {/* Image */}
-              <div>
+              <div className='flex basis-3/5 justify-center md:z-10
+              md:ml-40 md:mt-16 md:justify-item-end'
+              >
                   <img src={ HomePageGraphic} alt='home-pageGraphic' />
               </div>
           </div>
