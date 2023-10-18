@@ -52,7 +52,9 @@ const Home = ({ setSelectPage }: Props) => {
                   </AnchorLink>
               </div>
               {/* Image */}
-              <div></div>
+              <div>
+                  <img src={ HomePageGraphic} alt='home-pageGraphic' />
+              </div>
           </div>
           
     </section>
