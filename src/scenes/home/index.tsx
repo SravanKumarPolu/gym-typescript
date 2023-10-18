@@ -10,10 +10,10 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 
 type Props = {
-    setSelectPage: (value: SelectedPage) => void
+    setSelectedPage: (value: SelectedPage) => void
 }
 
-const Home = ({ setSelectPage }: Props) => {
+const Home = ({ setSelectedPage }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)")
     
   return (
@@ -25,7 +25,7 @@ const Home = ({ setSelectPage }: Props) => {
           {/* Image and mainheader */}
           <motion.div className='md:flex mx-auto w-5/6 items-center
           justify-center md:h-6/6'
-              onViewportEnter={()=>setSelectPage(SelectedPage.Home)}
+              onViewportEnter={()=>setSelectedPage(SelectedPage.Home)}
           >
               {/* mainheader */}
               <div className='z-10 mt-32 md:basis-3/5'>
@@ -65,14 +65,14 @@ const Home = ({ setSelectPage }: Props) => {
                        visible:{opacity:1,x:0},
                    }}
                   >
-                  <ActionButton setSelectedPage={setSelectPage}
+                  <ActionButton setSelectedPage={setSelectedPage}
                   >
                       Join Now
                   </ActionButton>
                   <AnchorLink
                       className='text-sm font-bold text-primary-500 underline
                   hover:text-secondary-500'
-                      onClick={() => setSelectPage(SelectedPage.ContactUs)}
+                      onClick={() => setSelectedPage(SelectedPage.ContactUs)}
                       href={`#${SelectedPage.ContactUs}`}
                   >
                    <p>Learn More</p>   
