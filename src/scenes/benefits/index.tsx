@@ -5,6 +5,8 @@ import { BenefitType, SelectedPage } from '@/shared/types'
 import { motion } from 'framer-motion'
 import HText from '@/shared/HText'
 import Benefit from '@/scenes/benefits/Benefit';
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
+import ActionButton from '@/shared/ActionButton';
 
 const benefits: Array<BenefitType> = [
 
@@ -89,6 +91,61 @@ const Benefits = ({setSelectedPage}: Props) => {
                       ))}   
               </motion.div>
 
+              {/* Graphics and Description */}
+              <div className='mt-16 items-center justify-between gap-20 md:mt-28 md:flex'
+              >
+              <img className='mx-auto'
+                  alt='benefits-page-graphic'
+                  src={BenefitsPageGraphic}
+              />
+
+              {/* Description */}
+              <div>
+                  {/* Title */}
+                  <div className='relative'>
+                      <div className='before:absolute before:-top-20
+                       before:-left-20 before:z-[1] before:content-abstractwaves'>
+                              <motion.div
+                                  initial="hidden"
+                                  whileInView='visible'
+                                  viewport={{ once: true, amount: 0.5 }}
+                                  transition={{ duration: 0.5 }}
+                                  variants={{
+                                      hidden: { opacity: 0, x: -50 },
+                                      visible:{opacity:1,x:0},
+                                  }}
+                              >
+                              <HText>
+                                  MILLIONS OF HAPPY MEMBERS GETTING{" "}
+                                  <span className='text-primary-500'>
+                                      FIT
+                                  </span>.
+                              </HText>
+                          </motion.div>    
+                      </div>
+                  </div>
+
+                  {/* Descript */}
+                  <div>
+                      <p>It’s a misconception that you need to go to the gym or spend thousands of dollars on equipment to get a good workout.
+                          Thousands of my 28ers have achieved fantastic results working out in the comfort of their own home using little to
+                           no equipment at all</p>
+                      <p>Need some training structure? Our plans will get you back on track, and keep you there.
+                          Explore the Plans tab for training plans based on your goals and training days - there's a plan for everyone</p>
+                  </div>
+                  
+                  {/* Button */}
+                  <div className='relative mt-16'>
+                      <div className='before:absolute before:-bottom-20
+                       before:right-40 before:z-[-1] before:content-sparkles'
+                      >
+                          <ActionButton setSelectedPage={setSelectedPage} >
+                              Join Now
+                          </ActionButton>  
+                      </div>
+                  </div>
+              </div>
+             </div>
           </motion.div>
       </section>
   )
