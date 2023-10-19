@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon }
     from '@heroicons/react/24/solid';
 import { BenefitType, SelectedPage } from '@/shared/types'
@@ -11,17 +11,17 @@ const benefits: Array<BenefitType> = [
     {
         icon: <HomeModernIcon className='h-6 w-6 ' />,
         title: "State of the Art Facilities",
-        description: 'Neque adipiscing amet enim.Feugiate dolor enim fermentum in a in lectus pellentesque.'
+        description: 'We provide world class fitness equipment, trainers and classes to get you to your ultimate fitness goals with ease. We provide ture care into each and every member'
     },
     {
         icon: <UserGroupIcon className='h-6 w-6 ' />,
         title: "100's of Diverse Classes",
-        description: 'Eu ipsum id egestas risus tempus  enim semper felis quis.Nec consectetur ac venenatis facilisi est. Eget ac turpis id.'
+        description: 'We provide world class fitness equipment, trainers and classes to get you to your ultimate fitness goals with ease. We provide ture care into each and every member'
     },
     {
         icon: <AcademicCapIcon className='h-6 w-6 ' />,
         title: 'Expert and Pro Trainers',
-        description: 'Fusce vestibulum aliquam ut cras . Nisl lectus egests sapien nisl.Lacus at mi sit pellenteque. Congue parturient.'
+        description: 'We provide world class fitness equipment, trainers and classes to get you to your ultimate fitness goals with ease. We provide ture care into each and every member'
     },
 ];
     
@@ -57,11 +57,11 @@ const Benefits = ({setSelectedPage}: Props) => {
               </div> 
               {/* Benefits */}
               <div
-              className='md:flex items-center justity-between gap-8 mt-5 '
+              className=' md:flex items-center justity-between gap-8 mt-5 '
               >
-                  {benefits.map((benefit:BenefitType) => (
+                  {benefits.map((benefit:BenefitType,index:number) => (
                     <Benefit
-                    Key={benefit.title}
+                    key={index}
                     icon={benefit.icon}
                     title={benefit.title}
                     description={benefit.description}
