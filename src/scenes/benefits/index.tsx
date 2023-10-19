@@ -24,6 +24,12 @@ const benefits: Array<BenefitType> = [
         description: 'We provide world class fitness equipment, trainers and classes to get you to your ultimate fitness goals with ease. We provide ture care into each and every member'
     },
 ];
+const container = {
+    hidden: {},
+    visible: {
+        transition:{staggerChildren:0.2}
+    }
+}
     
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -34,14 +40,22 @@ const Benefits = ({setSelectedPage}: Props) => {
   return (
       <section
           id='benefits'
-          className='mx-auto min-h-full w-5/6 py-20'
+          className='mx-auto min-h-full w-5/6 py-20 my-auto '
       >
           <motion.div
            onViewportEnter={()=>setSelectedPage(SelectedPage.Benefits)}
           >
               {/* Header */}
-              <div
-              className='md:my-5 md:w-3/5'
+              <motion.div
+                  className='md:my-5 md:w-3/5'
+                  initial="hidden"
+                  whileInView='visible'
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                  variants={{
+                      hidden: { opacity: 0, x: -50 },
+                      visible:{opacity:1,x:0},
+                  }}
               >
                   <HText> 
                       MORE THAN JUST GYM.
@@ -54,10 +68,15 @@ const Benefits = ({setSelectedPage}: Props) => {
                       fitness goals with ease. We provide ture care into
                       each and every member
                   </p>
-              </div> 
+              </motion.div> 
               {/* Benefits */}
-              <div
-              className=' md:flex items-center justity-between gap-8 mt-5 '
+              <motion.div
+                  className=' md:flex items-center justity-between
+               gap-8 mt-5 '
+               initial="hidden"
+               whileInView="visible"
+               viewport={{ once: true, amount: 0.5 }}
+               variants={container}
               >
                   {benefits.map((benefit:BenefitType,index:number) => (
                     <Benefit
@@ -68,7 +87,7 @@ const Benefits = ({setSelectedPage}: Props) => {
                     setSelectedPage={setSelectedPage}
                   />
                       ))}   
-              </div>
+              </motion.div>
 
           </motion.div>
       </section>
