@@ -7,7 +7,7 @@ import image5 from "@/assets/image5.png"
 import image6 from "@/assets/image6.png"
 import { motion } from "framer-motion"
 import HText from "@/shared/HText"
-import { describe } from "node:test"
+
 import Class from "./Class"
 
 
@@ -77,11 +77,11 @@ const OurClasses = ({setSelectedPage }: Props) => {
                   </p>
                   </div>
                  
-              </motion.div> 
+              </motion.div>  
               <div
-                  className="mt-1- h-[353px  w-full  overflow-x-auto overflow-y-hidden"
+                  className="mt-10  h-[353px}  w-full  overflow-x-auto overflow-y-hidden"
               >
-                  <ul className="w-2800px whitespace-nowrap ">
+                  <ul className="w-[2800px] whitespace-nowrap ">
                       {classes.map((item: ClassType, index) => (
                           <Class
                               key={`${item.name}-${index}`}
