@@ -35,7 +35,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           >
               {/* Header */}
               <motion.div
-                      className="mx-auto w-5/6"
+                      className="mx-auto w-5/6 ml-[-.1rem]"
                       initial="hidden"
                       whileInView='visible'
                       viewport={{ once: true, amount: 0.5 }}
@@ -45,7 +45,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                           visible:{opacity:1,x:0},
                       }}
               >
-                  <HText>
+                  <HText >
                       <span
                           className="text-primary-500"
                       >JOIN NOW</span> TO GET IN SHAPE
@@ -148,7 +148,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                           visible:{opacity:1,y:0},
                       }}
                   >
-                      <div className="md:before:content-evolvetext w-full before:absolute before:-bootome-20
+                      <div className=" w-full before:absolute before:-bootome-20
                        before:-right-10 before:z-[-1]"
                       >
                           <img
