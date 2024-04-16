@@ -63,13 +63,13 @@ const Navbar = ({ isTopOfPage,selectedPage,setSelectedPage}: Props) => {
                   </div>       
                 </div>
             </div>
-            {/* Mobile menu  modal */}
+        
             {!isAboveMediumScreens && isMenuToggled && (
                 <div className='fixed right-0 bottom-0
                  z-40 h-full w-[300px] bg-primary-100 
                  drop-shadow-xl'
                 >
-                    {/* close icon */}
+                 
                     <div className='flex justify-end p-12'
                     >
                         <button 

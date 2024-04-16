@@ -1,8 +1,9 @@
-export enum SelectedPage{
-    Home = "home",
-    Benefits = "benefits",
-    OurClasses = "ourclasses",
-    ContactUs="contactus"
+export enum SelectedPage {
+ 
+  Benefits = "benefits",
+  OurClasses = "ourclasses",
+  ContactUs = "contactus",
+  Home = "Home"
 }
 export interface BenefitType{
   icon: JSX.Element;
