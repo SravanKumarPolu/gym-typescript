@@ -1,27 +1,28 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# This demo project of Gym Website
+## In this project mainly used Languages and libraries
+    1.React
+    2.Tailwind
+    3.TypeScript
 
-Currently, two official plugins are available:
+    
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project consists of three main sections:
 
-## Expanding the ESLint configuration
+1. **Header**
+2. **Body**
+   1. Hero (Home)
+   2. Benefits
+   3. Our Classes
+   4. Contact Us
+3. **Footer**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## WorkExperience
+ 1. veloped a responsive webpage for Gym using React, Tailwind CSS, and TypeScript.
+ 2. Utilized Tailwind CSS to ensure a mobile-first design approach, enhancing user experience across devices.
+ 3. Integrated various React hooks for state management.
+ 4. Ensured the application was fully responsive and accessible .
+ 5. react-anchor-link-smooth-scroll is  used to scroll the page.
+ 6. Framer Motion allows items on the page to move slowly into their perfect position whenever the web page is opened.
+### My wesite  click [Link] (https://sravan-gym.netlify.app/)
