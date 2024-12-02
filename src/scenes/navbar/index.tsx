@@ -1,10 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Logo from "@/assets/Logo.png";
+import { useEffect, useRef, useState } from 'react';
+
+import ActionButton from '@/shared/ActionButton';
 import Link from "./Link";
+import Logo from "@/assets/Logo.png";
 import { SelectedPage } from '@/shared/types';
 import useMediaQuery from '@/hooks/useMediaQuery';
-import ActionButton from '@/shared/ActionButton';
 
 type Props = {
     selectedPage: SelectedPage;
@@ -16,7 +17,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const flexBetween = "flex items-center justify-between";
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-    const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
+    const navbarBackground = isTopOfPage ? "bg-transparent" : "bg-white shadow-md";
     const settingRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
